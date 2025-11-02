@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kazamoi - Centrale de Réservation Premium</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>🏡 Kazamoi</h1>
+            <p class="tagline">Votre centrale de réservation 5 étoiles</p>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2>Bienvenue dans l'établissement le plus exclusif du quartier</h2>
+            <p class="subtitle">Réservation obligatoire • Service personnalisé • Confort garanti</p>
+        </section>
+
+        <section class="booking-form">
+            <h3>📅 Réservez votre séjour</h3>
+            <p class="warning-text">⚠️ Réservations acceptées uniquement 48h à l'avance minimum</p>
+            
+            <form id="reservationForm">
+                <div class="form-group">
+                    <label for="guestName">Nom du visiteur privilégié :</label>
+                    <input type="text" id="guestName" name="guestName" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="arrivalDate">Date d'arrivée souhaitée :</label>
+                    <input type="date" id="arrivalDate" name="arrivalDate" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="arrivalTime">Heure d'arrivée estimée :</label>
+                    <input type="time" id="arrivalTime" name="arrivalTime" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="roomType">Type de chambre :</label>
+                    <select id="roomType" name="roomType" required>
+                        <option value="">-- Choisissez votre suite --</option>
+                        <option value="Suite Standard (canapé inclus)">Suite Standard (canapé inclus)</option>
+                        <option value="Suite Premium (lit king size)">Suite Premium (lit king size)</option>
+                        <option value="Suite Deluxe (petit-déjeuner au lit)">Suite Deluxe (petit-déjeuner au lit)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="specialRequests">Demandes spéciales :</label>
+                    <textarea id="specialRequests" name="specialRequests" rows="3" placeholder="Ex: Chocolats sur l'oreiller, température de la chambre, playlist préférée..."></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit">✨ Confirmer ma réservation ✨</button>
+                <p class="info-text" id="validationMessage"></p>
+            </form>
+        </section>
+
+        <section class="amenities">
+            <h3>🌟 Nos services exclusifs</h3>
+            <div class="amenities-grid">
+                <div class="amenity-card">
+                    <span class="icon">🛏️</span>
+                    <h4>Literie premium</h4>
+                    <p>Oreillers moelleux et couette 4 saisons</p>
+                </div>
+                <div class="amenity-card">
+                    <span class="icon">🍳</span>
+                    <h4>Petit-déjeuner</h4>
+                    <p>Café frais et croissants (si disponibles)</p>
+                </div>
+                <div class="amenity-card">
+                    <span class="icon">📺</span>
+                    <h4>Divertissement</h4>
+                    <p>Netflix et choix du film garanti</p>
+                </div>
+                <div class="amenity-card">
+                    <span class="icon">🚿</span>
+                    <h4>Salle de bain privée</h4>
+                    <p>Serviettes propres à disposition</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="rules">
+            <h3>📋 Règlement intérieur</h3>
+            <ul>
+                <li>✅ Réservation minimum 48h à l'avance (règle non négociable !)</li>
+                <li>✅ Arrivée tardive tolérée avec préavis</li>
+                <li>✅ Annulation gratuite jusqu'à 12h avant l'arrivée</li>
+                <li>✅ Politique "zéro prise de tête" appliquée</li>
+                <li>✅ Câlins inclus dans toutes les formules</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Kazamoi - Établissement de charme sous licence exclusive</p>
+        <p class="footer-note">💚 Réservé à ma personne préférée 💚</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
